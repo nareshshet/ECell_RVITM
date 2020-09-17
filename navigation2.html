@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="navigation2.css">
+  </head>
+  <body>
+    <span class="open" onclick="openNavbar()">&#9776; Menu</span>
+    <div id="navbar" class="overlay">
+      <a href="javascript:void(0);" onclick="closeNavbar()" class="close">&#9932;</a>
+      <div class="overlay-content">
+        <a href="javascript:void(o);">Home</a>
+        <a href="javascript:void(o);">Events</a>
+        <a href="javascript:void(o);">Team</a>
+        
+        <a href="javascript:void(o);">Contact</a>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      function openNavbar() {
+  document.querySelector("#navbar").style.width = "100%";
+  document.querySelectorAll(".open")[0].style.opacity = 0;
+}
+function closeNavbar() {
+  document.querySelector("#navbar").style.width = "0";
+  document.querySelectorAll(".open")[0].style.opacity = 1;
+}
+
+    </script>
+  </body>
+</html>
