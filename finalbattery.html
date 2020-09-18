@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="finalbattery.css">
+  </head>
+  <body>
+    <div class="cup" id="cup">
+    <!-- <p class="please_fill">charge me</p> -->
+      <div class="water" id="water">
+
+        <div class="wave" id="wave">
+          <p id="percent"></p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  window.onscroll = function() {myFunction()};
+
+function myFunction() {
+var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+var scrolled = (winScroll / height) * 100;
+
+var percent = document.getElementById("percent");
+percent .innerHTML = Math.round(scrolled) + "%";
+
+}
+
+</script>
+<script type="text/javascript">
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop(),
+        dh = $(document).height(),
+        wh = $(window).height();
+        scrollPercent =  (scroll / (dh-wh)) * 100;
+
+        $(".wave").css('height',scrollPercent + '%');
+        
+
+  })
+
+
+</script>
+
+</body>
+</html>
